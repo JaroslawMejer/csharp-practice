@@ -24,3 +24,16 @@ C:\workspace\c# practice\csharp-practice\src\GradeBook\obj\Debug\netcoreapp3.1\G
 C:\workspace\c# practice\csharp-practice\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.dll
 C:\workspace\c# practice\csharp-practice\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.pdb
 C:\workspace\c# practice\csharp-practice\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.genruntimeconfig.cache
+C:\Users\jaros\Desktop\Repos\csharp-practice\src\GradeBook\bin\Debug\netcoreapp3.1\GradeBook.exe
+C:\Users\jaros\Desktop\Repos\csharp-practice\src\GradeBook\bin\Debug\netcoreapp3.1\GradeBook.deps.json
+C:\Users\jaros\Desktop\Repos\csharp-practice\src\GradeBook\bin\Debug\netcoreapp3.1\GradeBook.runtimeconfig.json
+C:\Users\jaros\Desktop\Repos\csharp-practice\src\GradeBook\bin\Debug\netcoreapp3.1\GradeBook.runtimeconfig.dev.json
+C:\Users\jaros\Desktop\Repos\csharp-practice\src\GradeBook\bin\Debug\netcoreapp3.1\GradeBook.dll
+C:\Users\jaros\Desktop\Repos\csharp-practice\src\GradeBook\bin\Debug\netcoreapp3.1\GradeBook.pdb
+C:\Users\jaros\Desktop\Repos\csharp-practice\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.csprojAssemblyReference.cache
+C:\Users\jaros\Desktop\Repos\csharp-practice\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.AssemblyInfoInputs.cache
+C:\Users\jaros\Desktop\Repos\csharp-practice\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.AssemblyInfo.cs
+C:\Users\jaros\Desktop\Repos\csharp-practice\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.csproj.CoreCompileInputs.cache
+C:\Users\jaros\Desktop\Repos\csharp-practice\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.dll
+C:\Users\jaros\Desktop\Repos\csharp-practice\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.pdb
+C:\Users\jaros\Desktop\Repos\csharp-practice\src\GradeBook\obj\Debug\netcoreapp3.1\GradeBook.genruntimeconfig.cache

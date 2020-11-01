@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xgkN6DXP/NyVGIdQRRT2t+m4pDU4tcxuRQIqzEYPbl9N0iUuhFqyu2/7ZIedjJtKrmnqO++tg2GKEqqKKyJA1g==",
+  "dgSpecHash": "50A/Vzj4JaZue7kXZsjJiwiNfeRTFzSC02w+3eE8CstCri+aOEpuh9s0FuR/v5+zT1gwaNHyOdsUt4ypsbrEDg==",
   "success": true,
-  "projectFilePath": "C:\\workspace\\c# practice\\csharp-practice\\src\\GradeBook\\GradeBook.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\BI39QY\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\jaros\\Desktop\\Repos\\csharp-practice\\src\\GradeBook\\GradeBook.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
