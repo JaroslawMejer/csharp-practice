@@ -3,9 +3,34 @@ using Xunit;
 
 namespace GradeBook.Tests
 {
+
+    public delegate string WriteLogDelegate(string logMessage);
     public class TypeTests
     {
-        
+        int count = 0;
+        [Fact]
+        public void WriteLogDelegateCanPointToMethod()
+        {
+            WriteLogDelegate log = ReturnMessage; // LOG CAN HAVE MULTIPLE METHODS AND WHEN ENVOKING IT, WE ARE LAUNCHING ALL ASSIGNED METHODS
+            log += ReturnMessage;
+
+            log += IncrementCount;
+
+            var result = log("Hello!");
+            Assert.Equal(3, count);
+        }
+
+        string IncrementCount(string message) // Methods added to delegate HAS TO HAVE THE SAME BUILD TYPE, in this case string
+        {
+            count++;
+            return message;
+        }
+        string ReturnMessage(string message)
+        {
+            count++;
+            return message;
+        }
+
         [Fact]
         public void StringsBehavesLikeValueTypes() // Strings are immutable, the whole value needs to be changed
         {
