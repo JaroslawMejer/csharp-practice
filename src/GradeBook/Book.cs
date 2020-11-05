@@ -1,18 +1,56 @@
 using System;
 using System.Collections.Generic;
-
+using System.IO;
 
 namespace GradeBook
 {
     public delegate void GradeAddedDelegate(object sender, EventArgs args);
-    public class Book
+    public class DiskBook : Book
     {
-        public Book(string name)
+        public DiskBook(string name) : base(name)
+        {
+        }
+
+        public override event GradeAddedDelegate GradeAdded;
+
+        public override void AddGrade(double grade)
+        {
+            using(var writer = File.AppendText($"{Name}.txt"))
+            {
+                writer.WriteLine(grade); //using here means, that after the code in brackets will execute, on writer there will be used dispose - cleaning
+                if(GradeAdded != null)
+                {
+                    GradeAdded(this, new EventArgs());
+                }
+            }
+        }
+
+        public override Statistics GetStatistics()
+        {
+            var result = new Statistics();
+
+            using(var reader = File.OpenText($"{Name}.txt"))
+            {
+                var line = reader.ReadLine();
+                while(line != null)
+                {
+                    var number = double.Parse(line);
+                    result.Add(number);
+                    line = reader.ReadLine();
+                }
+            } 
+
+            return result;
+        }
+    }
+    public class InMemoryBook : Book, IBook
+    {
+        public InMemoryBook(string name) : base("")
         {
             grades = new List<double>();
             Name = name;
         }
-        public void AddGrade(double grade)
+        public override void AddGrade(double grade)
         {
              if(grade <= 100 && grade >= 0)
              {
@@ -50,50 +88,20 @@ namespace GradeBook
             }
         }
 
-        public event GradeAddedDelegate GradeAdded;
+        public override event GradeAddedDelegate GradeAdded;
 
-        public Statistics GetStatistics()
+        public override Statistics GetStatistics()
         {
             var result = new Statistics();
-            result.Average = 0.0;
-            result.High = double.MinValue;
-            result.Low = double.MaxValue;
+            
             foreach(var grade in grades){
-                result.Low = Math.Min(grade, result.Low);
-                result.High = Math.Max(grade, result.High);
-                result.Average += grade;
-            }
-            result.Average /= grades.Count;
-
-            switch(result.Average)
-            {
-                case var d when d >= 90.0:
-                    result.Letter = 'A';
-                    break;
-                case var d when d >= 80.0:
-                    result.Letter = 'B';
-                    break;
-                case var d when d >= 70.0:
-                    result.Letter = 'C';
-                    break;
-                case var d when d >= 60.0:
-                    result.Letter = 'D';
-                    break;
-                default:
-                    result.Letter = 'F';
-                    break;
+                result.Add(grade);
             }
             
             return result;
         }
         private List<double> grades; //private is lowercase
-        private string name; //public is uppercase
 
-        public string Name
-        {
-            get;
-            set; // auto property. It generates private variable in the back. In this case we can only read property, not change it.
-        }
         public const string CATEGORY = "science";
     }
 }
